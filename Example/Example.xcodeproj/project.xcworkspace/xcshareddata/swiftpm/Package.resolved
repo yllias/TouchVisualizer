@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TouchVisualizer",
+        "repositoryURL": "https://github.com/PSchmiedmayer/TouchVisualizer.git",
+        "state": {
+          "branch": null,
+          "revision": "c81e7b6073e497371a6e3c4265f5b785b6d7508f",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
