@@ -40,7 +40,7 @@ final public class Visualizer:NSObject {
     
     // MARK: - Helper Functions
     @objc internal func applicationDidBecomeActiveNotification(_ notification: Notification) {
-        UIApplication.shared.keyWindow?.swizzle()
+       UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.swizzle()
     }
     
     @objc internal func orientationDidChangeNotification(_ notification: Notification) {
@@ -73,7 +73,7 @@ extension Visualizer {
         instance.enabled = true
         instance.config = config
         
-        if let window = UIApplication.shared.keyWindow {
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) {
             for subview in window.subviews {
                 if let subview = subview as? TouchView {
                     subview.removeFromSuperview()
@@ -141,7 +141,10 @@ extension Visualizer {
             return
         }
 
-        var topWindow = UIApplication.shared.keyWindow!
+        guard var topWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+            return
+        }
+        
         for window in UIApplication.shared.windows {
             if window.isHidden == false && window.windowLevel > topWindow.windowLevel {
                 topWindow = window
@@ -179,6 +182,10 @@ extension Visualizer {
                 }
                 
                 log(touch)
+            case .regionEntered, .regionMoved, .regionExited:
+                break
+            @unknown default:
+                break
             }
         }
     }
@@ -212,6 +219,10 @@ extension Visualizer {
             case .stationary: phase = "S"
             case .ended: phase = "E"
             case .cancelled: phase = "C"
+            case .regionEntered, .regionMoved, .regionExited:
+                break
+            @unknown default:
+                break
             }
             
             let x = String(format: "%.02f", view.center.x)
