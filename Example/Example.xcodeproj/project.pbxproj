@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		657F1A27239D896400B351BA /* TouchVisualizer in Frameworks */ = {isa = PBXBuildFile; productRef = 657F1A26239D896400B351BA /* TouchVisualizer */; };
-		65CD7F4C239D8B35000B3952 /* SampleCode.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 65CD7F4B239D8B35000B3952 /* SampleCode.xcconfig */; };
 		65F8E2EA239D83740015981A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8E2E9239D83740015981A /* AppDelegate.swift */; };
 		65F8E2EC239D83740015981A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8E2EB239D83740015981A /* SceneDelegate.swift */; };
 		65F8E2EE239D83740015981A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8E2ED239D83740015981A /* ContentView.swift */; };
@@ -120,7 +119,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Paul Schmiedmayer";
 				TargetAttributes = {
 					65F8E2E5239D83740015981A = {
@@ -157,7 +156,6 @@
 				65F8E2F6239D83750015981A /* LaunchScreen.storyboard in Resources */,
 				65F8E2F3239D83750015981A /* Preview Assets.xcassets in Resources */,
 				65F8E2F0239D83750015981A /* Assets.xcassets in Resources */,
-				65CD7F4C239D8B35000B3952 /* SampleCode.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
