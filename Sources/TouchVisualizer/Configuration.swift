@@ -2,7 +2,7 @@
 //  Configuration.swift
 //  TouchVisualizer
 //
-
+#if !os(visionOS)
 import UIKit
 
 public struct Configuration {
@@ -52,3 +52,4 @@ public struct Configuration {
 
     public init(){}
 }
+#endif
