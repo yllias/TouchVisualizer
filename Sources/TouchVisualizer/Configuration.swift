@@ -7,7 +7,7 @@ import UIKit
 
 public struct Configuration {
     private struct Constants {
-        static let defaultColor = UIColor(red: 0.0/255.0, green: 119.0/255.0, blue: 182.0/255.0, alpha: 1.0)
+        static let defaultColor = UIColor(red: 0.0/255.0, green: 119.0/255.0, blue: 182.0/255.0, alpha: 0.8)
     }
 
     /**
