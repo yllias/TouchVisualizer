@@ -2,7 +2,7 @@
 //  TouchView.swift
 //  TouchVisualizer
 //
-
+#if !os(visionOS)
 import UIKit
 
 final public class TouchView: UIImageView {
@@ -111,3 +111,4 @@ final public class TouchView: UIImageView {
         }
     }
 }
+#endif
