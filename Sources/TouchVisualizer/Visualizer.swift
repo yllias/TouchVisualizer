@@ -2,7 +2,7 @@
 //  TouchVisualizer.swift
 //  TouchVisualizer
 //
-
+#if !os(visionOS)
 import UIKit
 
 final public class Visualizer:NSObject {
@@ -255,3 +255,4 @@ extension Visualizer {
         print(log, terminator: "")
     }
 }
+#endif
