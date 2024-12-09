@@ -2,7 +2,7 @@
 //  UIWindow+Swizzle.swift
 //  TouchVisualizer
 //
-
+#if !os(visionOS)
 import UIKit
 
 fileprivate var isSwizzled = false
@@ -36,3 +36,4 @@ extension UIWindow {
         swizzledSendEvent(event)
     }
 }
+#endif
